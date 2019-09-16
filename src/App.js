@@ -1,20 +1,23 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 import Home from './pages/Home'
 import Rooms from './pages/Rooms'
 import SingleRoom from './pages/SingleRoom'
-import Error from './pages/Error'
+import ErrorPage from './pages/Error'
 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import './styles/app.scss'
+
 
 const App = () => {
   return (
-    <div>
-      <Home />
-      <Rooms />
-      <SingleRoom />
-      <Error />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/rooms' component={Rooms} />
+        <Route exact path='/rooms/:roomId' component={SingleRoom} />
+        <Route path='*' component={ErrorPage} />
+      </Switch>
+    </Router>
   );
 }
 

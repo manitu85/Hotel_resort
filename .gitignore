@@ -3,6 +3,7 @@
 # custom
 data.js
 @todos.md
+index.scss
 
 # dependencies
 /node_modules
