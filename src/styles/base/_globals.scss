@@ -1,0 +1,47 @@
+// globals 
+
+body {
+  padding-top: 66px;
+  color: $mainBlack;
+  background: $mainWhite;
+  font-family: $font-primary;
+  line-height: 1.4;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: $mainSpacing;
+  color: $mainBlack;
+  background: $primaryColor;
+  padding: 0.4rem 0.9rem;
+  border: 3px solid $primaryColor;
+  transition: $mainTransition;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover  {
+    background: transparent;
+    color: $primaryColor;
+  }
+}
+
+.loading {
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.error {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+.empty-search {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  padding: 1rem;
+  letter-spacing: $mainSpacing;
+}

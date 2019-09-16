@@ -1,4 +1,6 @@
-// IMPORTS
+// ALL IMPORTS
 
-@import "./base/reset";
-@import "./base/typography";
+@import "./abstracts/_variables";
+@import "./base/_reset";
+@import "./base/_typography";
+@import "./base/_globals";
