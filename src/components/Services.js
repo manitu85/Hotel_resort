@@ -3,7 +3,6 @@ import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa'
 import Title from './Title'
 
 
-
 class Services extends Component {
 
   state = {
@@ -25,7 +24,7 @@ class Services extends Component {
       },
       {
         icon: <FaBeer />,
-        title: 'Stronges Beer',
+        title: 'Strongest Beer',
         info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste magni, repellendus earum maiores impedit? '
       }
     ]
@@ -41,7 +40,7 @@ class Services extends Component {
               return (
                 <article key={idx} className='service'>
                   <span>{item.icon}</span>
-                  <h6>{item.title}</h6>
+                  <h3 className='font-headings'>{item.title}</h3>
                   <p>{item.info}</p>
                 </article>
               )

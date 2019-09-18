@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { RoomProvider } from './contex';
+import { RoomProvider } from './context';
 
 import Navbar from './components/Navbar';
 import Home from './pages/Home'
@@ -9,11 +9,9 @@ import SingleRoom from './pages/SingleRoom'
 import ErrorPage from './pages/Error'
 
 
-
-
 const App = () => {
   return (
-    <RoomProvider>
+    <RoomProvider> 
       <Router>
         <>
           <Navbar />
