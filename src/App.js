@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { RoomProvider } from './contex';
 
 import Navbar from './components/Navbar';
 import Home from './pages/Home'
@@ -12,17 +13,19 @@ import ErrorPage from './pages/Error'
 
 const App = () => {
   return (
-    <Router>
-      <>
-        <Navbar />
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/rooms' component={Rooms} />
-          <Route exact path='/rooms/:roomName' component={SingleRoom} />
-          <Route path='*' component={ErrorPage} />
-        </Switch>
-      </>
-    </Router>
+    <RoomProvider>
+      <Router>
+        <>
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/rooms' component={Rooms} />
+            <Route exact path='/rooms/:roomName' component={SingleRoom} />
+            <Route path='*' component={ErrorPage} />
+          </Switch>
+        </>
+      </Router>
+    </RoomProvider>
   );
 }
 

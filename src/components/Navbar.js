@@ -4,7 +4,7 @@ import { FaAlignRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 
-export class Navbar extends Component {
+class Navbar extends Component {
 
   state = {
     isOpen: false
