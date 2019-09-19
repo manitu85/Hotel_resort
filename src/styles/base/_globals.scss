@@ -12,24 +12,28 @@ body {
   display: inline-block;
   text-decoration: none;
   letter-spacing: $mainSpacing;
-  color: $mainBlack;
-  background: $primaryColor;
+  // color: $mainBlack;
+  color: $mainWhite;
+    background: transparent;
   padding: 0.4rem 0.9rem;
-  border: 3px solid $primaryColor;
+  border: 1px solid $mainWhite;
   transition: $mainTransition;
   text-transform: uppercase;
   cursor: pointer;
 
   &:hover  {
-    background: transparent;
-    color: $primaryColor;
+  background: $primaryColor;
+    color: $mainWhite;
+    border: 1px solid $mainWhite;
   }
 }
 
 .loading {
   text-transform: capitalize;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
+  font-size: 1rem;
+  color: $primaryColor;
 }
 
 .error {
