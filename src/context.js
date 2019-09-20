@@ -22,7 +22,6 @@ class RoomProvider extends Component {
       sortedRooms: rooms,
       loading: false
     })
-
   }
 
   formatData = items => {
@@ -32,7 +31,8 @@ class RoomProvider extends Component {
 
       let room = { ...item.fields, images, id }
       return room;
-    });
+    })
+
     return tempItems;
   }
 
