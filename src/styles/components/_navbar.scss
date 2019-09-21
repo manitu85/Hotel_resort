@@ -36,9 +36,10 @@
   color: $mainBlack;
   transition: $mainTransition;
   text-align: center;
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 600;
-  letter-spacing: $mainSpacing;
+  // letter-spacing: $mainSpacing;
+  text-transform: uppercase;
 }
 .nav-links a:hover {
   color: $primaryColor;
@@ -60,7 +61,7 @@
   .nav-links {
     height: auto;
     display: flex;
-    margin-left: 4rem;
+    margin-left: auto;
   }
   .nav-links a {
     margin: 0 1rem;
