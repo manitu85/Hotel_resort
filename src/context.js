@@ -58,17 +58,36 @@ class RoomProvider extends Component {
     return room
   }
 
-  handleChange = e => {
-    const type = e.target.type
-    const name = e.target.name
-    const value  = e.target.value
 
-    console.log(type, name ,value);
-  }
+  handleChange = e => {
+    const target = e.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = e.target.name;
+
+    this.setState(
+      {
+        [name]: value
+      },
+      this.filterRooms
+    );
+  };
 
   filterRooms = () => {
-    console.log('hello')
-  }
+    let { rooms, type, capacity, price, minSize, maxSize, breakfast, pets } = this.state;
+    // all the rooms
+    let tempRooms = [...rooms];
+
+    // filter by type
+    if (type !== "all") {
+      tempRooms = tempRooms.filter(room => room.type === type);
+    }
+   
+    // change state
+    this.setState({
+      sortedRooms: tempRooms
+    });
+  };
+
 
   render() {
     const children = this.props.children;
@@ -82,7 +101,7 @@ class RoomProvider extends Component {
 
 const RoomConsumer = RoomContext.Consumer
 
-// HOC 
+// HOC helper function
 export const withRoomConsumer = Component => {
   return props => {
     return <RoomConsumer>
